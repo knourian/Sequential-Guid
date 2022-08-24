@@ -11,7 +11,7 @@ namespace SequentialGuidTests
             var services = new ServiceCollection();
             services.AddSequentialGuid();
             var serviceProvider = services.BuildServiceProvider();
-            _sequenctialGuid = serviceProvider.GetService<ISequentialGuid>();
+            _sequenctialGuid = serviceProvider.GetService<ISequentialGuid>()!;
         }
         [TestMethod]
         public void Sequential_Guid_Should_Not_Be_Null()
