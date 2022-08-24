@@ -24,6 +24,8 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Release
+      run: dotnet build --configuration Release
+    - name: Pack
       run: dotnet pack --configuration Release
     - name: Add Source
       run: dotnet nuget add source --username knourian --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/OWNER/index.json"
