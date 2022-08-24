@@ -5,8 +5,7 @@
 		<LangVersion>latest</LangVersion>
 		<Nullable>enable</Nullable>
 		<Title>Sequential Guid Generator</Title>
-		<Authors>Khashayar Nourian</Authors>
-		<Company>Knourian</Company>
+		<Authors>Knourian</Authors>
 		<Description>Use This Package to generate Sql Server Friendly Sequential Guid</Description>
 		<PackageProjectUrl>https://github.com/knourian/Sequential-Guid</PackageProjectUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>

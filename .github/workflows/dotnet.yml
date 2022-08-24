@@ -30,4 +30,4 @@ jobs:
     - name: Add Source
       run: dotnet nuget add source --username knourian --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/OWNER/index.json"
     - name: publish  
-      run: dotnet nuget push "./Sequential-Guid/bin/Release/Knourian.SequentialGuid.1.0.1.nupkg" --source "github"
+      run: dotnet nuget push "./SequentialGuid/bin/Release/Knourian.SequentialGuid.1.0.1.nupkg" --source "github"
