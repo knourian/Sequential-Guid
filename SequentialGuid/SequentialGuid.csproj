@@ -7,7 +7,19 @@
 		<Title>Sequential Guid Generator</Title>
 		<Authors>Khashayar Nourian</Authors>
 		<Description>Use This Package to generate Sql Server Friendly Sequential Guid</Description>
+		<PackageProjectUrl>https://github.com/knourian/Sequential-Guid</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryType>git</RepositoryType>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<RepositoryUrl>https://github.com/knourian/Sequential-Guid</RepositoryUrl>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Include="..\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Http" Version="2.0.0" />
