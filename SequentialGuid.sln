@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SequentialGuid", "SequentialGuid\SequentialGuid.csproj", "{D1E8E5C1-C4D4-4DBF-BAFA-B6DF752B39C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SequentialGuidTests", "SequentialGuidTests\SequentialGuidTests.csproj", "{38F7A3BE-0E1E-4ACA-BDDC-55766B339949}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1E8E5C1-C4D4-4DBF-BAFA-B6DF752B39C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1E8E5C1-C4D4-4DBF-BAFA-B6DF752B39C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1E8E5C1-C4D4-4DBF-BAFA-B6DF752B39C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1E8E5C1-C4D4-4DBF-BAFA-B6DF752B39C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38F7A3BE-0E1E-4ACA-BDDC-55766B339949}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38F7A3BE-0E1E-4ACA-BDDC-55766B339949}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38F7A3BE-0E1E-4ACA-BDDC-55766B339949}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38F7A3BE-0E1E-4ACA-BDDC-55766B339949}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1736FE37-0C2B-40A9-B527-ADA845A4801E}
+	EndGlobalSection
+EndGlobal
