@@ -12,6 +12,7 @@
 		<RepositoryType>git</RepositoryType>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<RepositoryUrl>https://github.com/knourian/Sequential-Guid</RepositoryUrl>
+		<PackageId>Knourian.$(AssemblyName)</PackageId>
 	</PropertyGroup>
 
 	<ItemGroup>

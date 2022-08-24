@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SequentialGuid", "SequentialGuid\SequentialGuid.csproj", "{D1E8E5C1-C4D4-4DBF-BAFA-B6DF752B39C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SequentialGuid", "SequentialGuid\SequentialGuid.csproj", "{D1E8E5C1-C4D4-4DBF-BAFA-B6DF752B39C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SequentialGuidTests", "SequentialGuidTests\SequentialGuidTests.csproj", "{38F7A3BE-0E1E-4ACA-BDDC-55766B339949}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SequentialGuidTests", "SequentialGuidTests\SequentialGuidTests.csproj", "{38F7A3BE-0E1E-4ACA-BDDC-55766B339949}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
