@@ -2,7 +2,7 @@
 
 namespace SequentialGuid
 {
-    public class SequentialGuid : ISequentialGuid
+    public static class GuidInstance
     {
         private static int[]? _sqlOrderMap;
         private static int[] SqlOrderMap
@@ -16,16 +16,20 @@ namespace SequentialGuid
             }
         }
 
-        private Guid _currentGuid;
-        public SequentialGuid()
+        private static Guid _currentGuid;
+        static GuidInstance()
         {
-            _currentGuid = Guid.NewGuid();
+            _currentGuid = new Guid("00000000-0000-0000-0000-000000000001");
         }
-        public Guid GetCurrentGuid()
+        public static void SetSeed(Guid guid)
+        {
+            _currentGuid = new Guid(guid.ToByteArray());
+        }
+        public static Guid GetCurrentGuid()
         {
             return _currentGuid;
         }
-        public Guid Next()
+        public static Guid Next()
         {
             byte[] bytes = _currentGuid.ToByteArray();
             for (int mapIndex = 0; mapIndex < 16; mapIndex++)
