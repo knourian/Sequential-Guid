@@ -2,6 +2,15 @@
 
 namespace SequentialGuid
 {
+    /// <summary>
+    /// Generate Guids in Sequential order
+    /// First Guid will be 00000000-0000-0000-0000-000000000001
+    /// Use Set Seed to Seed First Guid
+    /// Prefered Way to do :
+    /// <code>
+    ///     SetSeed(Guid.NewGuid());
+    /// </code>
+    /// </summary>
     public static class GuidInstance
     {
         private static int[]? _sqlOrderMap;
@@ -21,14 +30,26 @@ namespace SequentialGuid
         {
             _currentGuid = new Guid("00000000-0000-0000-0000-000000000001");
         }
+        /// <summary>
+        /// Set Starting Point for Guid Generation
+        /// </summary>
+        /// <param name="guid"></param>
         public static void SetSeed(Guid guid)
         {
             _currentGuid = new Guid(guid.ToByteArray());
         }
+        /// <summary>
+        /// Returns Current Guid (Last Generated)
+        /// </summary>
+        /// <returns>Current Guid</returns>
         public static Guid GetCurrentGuid()
         {
             return _currentGuid;
         }
+        /// <summary>
+        /// Generate Next Guid
+        /// </summary>
+        /// <returns>Next Guid</returns>
         public static Guid Next()
         {
             byte[] bytes = _currentGuid.ToByteArray();
