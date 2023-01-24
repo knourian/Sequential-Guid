@@ -1,40 +1,42 @@
 using SequentialGuid;
-
 namespace SequentialGuidTests
 {
     [TestClass]
     public class UnitTest
     {
-        private readonly ISequentialGuid _sequenctialGuid;
         public UnitTest()
         {
-            var services = new ServiceCollection();
-            services.AddSequentialGuid();
-            var serviceProvider = services.BuildServiceProvider();
-            _sequenctialGuid = serviceProvider.GetService<ISequentialGuid>()!;
         }
-        [TestMethod]
-        public void Sequential_Guid_Should_Not_Be_Null()
-        {
-            Assert.IsNotNull(_sequenctialGuid);
-        }
+
         [TestMethod]
         public void Cureent_Guid_Should_Not_Be_Null()
         {
-            Assert.IsNotNull(_sequenctialGuid.GetCurrentGuid());
+            Assert.IsNotNull(GuidInstance.GetCurrentGuid());
         }
 
         [TestMethod]
         public void Next_Guid_Should_Not_Be_Null()
         {
-            Assert.IsNotNull(_sequenctialGuid.Next());
+            Assert.IsNotNull(GuidInstance.Next());
         }
         [TestMethod]
         public void Next_Guid_Should_Be_Greater()
         {
-            var current = _sequenctialGuid.GetCurrentGuid();
-            var next = _sequenctialGuid.Next();
+            var current = GuidInstance.GetCurrentGuid();
+            var next = GuidInstance.Next();
             Assert.IsTrue(next.CompareTo(current) > 0);
+        }
+
+        [TestMethod]
+        public void Check_Seed_Method()
+        {
+            Guid current = GuidInstance.GetCurrentGuid();
+            Guid next = Guid.NewGuid();
+            GuidInstance.SetSeed(next);
+            Guid NewCurrnet = GuidInstance.GetCurrentGuid();
+            Assert.IsNotNull(NewCurrnet);
+            Assert.IsTrue(next.CompareTo(NewCurrnet) == 0);
+            Assert.IsTrue(current.CompareTo(NewCurrnet) != 0);
         }
     }
 }
